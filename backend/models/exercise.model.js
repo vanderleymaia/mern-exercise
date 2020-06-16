@@ -1,6 +1,6 @@
-const mogoose = require('mongoose')
+const mongoose = require('mongoose')
 
-const Schema = mogoose.Schema
+const Schema = mongoose.Schema
 
 const exerciseSchema = new Schema
 (
@@ -26,4 +26,7 @@ const exerciseSchema = new Schema
         timestamps: true,
     }
 )
+
+const Exercise = mongoose.model('Exercise', exerciseSchema)
+module.exports = Exercise
 
